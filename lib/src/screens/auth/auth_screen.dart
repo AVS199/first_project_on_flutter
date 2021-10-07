@@ -6,11 +6,19 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(middle: Text('Авторизация')),
+      navigationBar: CupertinoNavigationBar(
+        middle: Text('Авторизация'),
+      ),
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            CupertinoTextField(
+              placeholder: 'Логин или почта',
+            ),
+            CupertinoTextField(
+              placeholder: 'Пароль',
+            ),
             CupertinoButton.filled(
               child: Text('Войти'),
               onPressed: () {},
@@ -19,8 +27,6 @@ class AuthScreen extends StatelessWidget {
               child: Text('Зарегистрироваться'),
               onPressed: () {},
             ),
-            CupertinoTextField(placeholder: 'Логин или Почта'),
-            CupertinoTextField(placeholder: 'Пароль')
           ],
         ),
       ),
